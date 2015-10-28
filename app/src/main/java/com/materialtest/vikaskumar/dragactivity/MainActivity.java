@@ -1,5 +1,5 @@
 package com.materialtest.vikaskumar.dragactivity;
-
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
@@ -19,6 +20,8 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
     private ViewGroup mRrootLayout;
     private int _xDelta;
     private int _yDelta;
+    private Button button;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +33,18 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         mImageView = (ImageView) mRrootLayout.findViewById(R.id.imageView);
         RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(150, 150);
         mImageView.setLayoutParams(layoutParams);
-        mImageView.setOnTouchListener(this);
+        //mImageView.setOnTouchListener(this);
+        button = (Button) findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(v.getContext(),AnimationTest.class);
+                startActivity(intent);
+            }
+        });
+
+
+
     }
 
     public boolean onTouch(View view, MotionEvent event) {

@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    tools:context="com.materialtest.vikaskumar.dragactivity.AnimationTest">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom|center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/block_1"
+            android:layout_width="70sp"
+            android:layout_height="wrap_content"
+            android:background="#FF448844"
+            android:gravity="center"
+            android:text="1" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

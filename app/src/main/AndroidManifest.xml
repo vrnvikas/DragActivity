@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".AnimationTest"
+            android:label="@string/title_activity_animation_test" >
+        </activity>
     </application>
 
 </manifest>
