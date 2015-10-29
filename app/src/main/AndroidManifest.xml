@@ -20,6 +20,10 @@
             android:name=".AnimationTest"
             android:label="@string/title_activity_animation_test" >
         </activity>
+        <activity
+            android:name=".InteractiveBook"
+            android:label="@string/title_activity_interactive_book" >
+        </activity>
     </application>
 
 </manifest>

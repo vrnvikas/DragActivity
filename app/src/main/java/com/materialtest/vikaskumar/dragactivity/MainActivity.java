@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
     private ViewGroup mRrootLayout;
     private int _xDelta;
     private int _yDelta;
-    private Button button;
+    private Button button1, button2;
     Intent intent;
 
     @Override
@@ -33,17 +33,26 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         mImageView = (ImageView) mRrootLayout.findViewById(R.id.imageView);
         RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(150, 150);
         mImageView.setLayoutParams(layoutParams);
-        //mImageView.setOnTouchListener(this);
-        button = (Button) findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
+        mImageView.setOnTouchListener(this);
+        button1 = (Button) findViewById(R.id.button);
+
+        button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(v.getContext(),AnimationTest.class);
+                intent = new Intent(v.getContext(), AnimationTest.class);
                 startActivity(intent);
             }
         });
 
+        button2 = (Button) findViewById(R.id.button1);
 
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(v.getContext(),InteractiveBook.class);
+                startActivity(intent);
+            }
+        });
 
     }
 

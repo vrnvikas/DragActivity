@@ -18,13 +18,30 @@
         android:layout_marginTop="124dp"
         android:src="@mipmap/ic_launcher" />
 
-    <Button
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button"
+        android:orientation="horizontal"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Animation Test"
+            android:id="@+id/button"
+             />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Animation Book"
+            android:id="@+id/button1"
+            />
+
+    </LinearLayout>
+
+
+
 
 
 </RelativeLayout>

@@ -2,12 +2,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     tools:context="com.materialtest.vikaskumar.dragactivity.AnimationTest">
 
     <LinearLayout
+        android:id="@+id/tower_1"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:background="#FFEEDDDD"
         android:gravity="bottom|center_horizontal"
         android:orientation="vertical">
 
@@ -20,6 +23,22 @@
             android:text="1" />
 
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tower_2"
+        android:layout_width="200sp"
+        android:layout_height="fill_parent"
+        android:background="#FFDDEEDD"
+        android:gravity="bottom|center_horizontal"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:id="@+id/tower_3"
+        android:layout_width="200sp"
+        android:layout_height="fill_parent"
+        android:background="#FFDDDDEE"
+        android:gravity="bottom|center_horizontal"
+        android:orientation="vertical" />
 
 
 </LinearLayout>
