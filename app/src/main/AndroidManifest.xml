@@ -24,6 +24,10 @@
             android:name=".InteractiveBook"
             android:label="@string/title_activity_interactive_book" >
         </activity>
+        <activity
+            android:name=".SolarSystem"
+            android:label="@string/title_activity_solar_system" >
+        </activity>
     </application>
 
 </manifest>

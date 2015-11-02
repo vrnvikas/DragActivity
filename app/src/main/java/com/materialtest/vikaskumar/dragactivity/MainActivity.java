@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
     private ViewGroup mRrootLayout;
     private int _xDelta;
     private int _yDelta;
-    private Button button1, button2;
+    private Button button1, button2,button3;
     Intent intent;
 
     @Override
@@ -54,6 +54,16 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
             }
         });
 
+        button3 = (Button) findViewById(R.id.button2);
+
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(v.getContext(),SolarSystem.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     public boolean onTouch(View view, MotionEvent event) {
@@ -64,6 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                 RelativeLayout.LayoutParams lParams = (RelativeLayout.LayoutParams) view.getLayoutParams();
                 _xDelta = X - lParams.leftMargin;
                 _yDelta = Y - lParams.topMargin;
+
                 break;
             case MotionEvent.ACTION_UP:
                 break;
@@ -82,6 +93,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                 break;
         }
         mRrootLayout.invalidate();
+
         return true;
     }
 
